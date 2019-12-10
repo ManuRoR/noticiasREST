@@ -1,0 +1,19 @@
+<div class="container">
+        <div class="row">
+       <div class="col-3" *ngFor="let tweet of this.noticiasTweets?.tweets">
+       <app-noticias 
+       [id]="tweet.id"
+       [imagen]="tweet?.extended_entities?.media[0]?.media_url_https"
+       [created]="tweet.created_at" 
+       [fullText]="tweet.full_text"
+       (openTweet)="touchParent($event)">
+       
+      </app-noticias>
+      
+       <!--<app-nombre [titulo]="'UNO'"></app-nombre>
+       <app-nombre [titulo]="'DOS'"></app-nombre>
+       <app-nombre [titulo]="'TRES'"></app-nombre>
+       <app-nombre [titulo]="'CUATRO'"></app-nombre>-->
+      </div>
+      </div>
+      </div>
